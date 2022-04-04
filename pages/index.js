@@ -51,6 +51,34 @@ export default function Home() {
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid justify-content-center">
           <span className="navbar-brand mb-0 h1 ">Streaks</span>
+          <div className="dropdown">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a className="dropdown-item" href="#">
+                  Action
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Something else here
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
@@ -68,7 +96,7 @@ export default function Home() {
             <div key={item.id} className="card mt-2 ms-2">
               <div className="card-body">
                 <h5 className="card-title">{item.name}</h5>
-                <p className="card-text">
+                <div className="card-text">
                   <button
                     onClick={(id) => handleDec(item.id)}
                     className="btn btn-danger me-2"
@@ -93,7 +121,7 @@ export default function Home() {
                   >
                     Reset
                   </button>
-                </p>
+                </div>
               </div>
             </div>
           ))}
